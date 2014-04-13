@@ -122,7 +122,7 @@ project into Eclipse.
               connect to each other in a variety of ways
           - [util](./src/model/util) = classes that enable the brain model properties to be viewed
             graphically and efficiently saved and opened
-  - tests = test classes for important classes in the ```src/``` folder
+  - tests = test classes for important classes in the `src/` and `experiments/` folder
       + model
           - [MARK_I](./tests/model/MARK_I)
             + [connectTypes](./tests/model/MARK_I/connectTypes)
