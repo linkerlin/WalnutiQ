@@ -1,8 +1,9 @@
-package model.MARK_I;
+package test.java.model.MARK_I;
 
-import model.MARK_I.Cell;
-import model.MARK_I.Synapse;
-import model.MARK_I.VisionCell;
+import main.java.model.MARK_I.Cell;
+import main.java.model.MARK_I.Synapse;
+import main.java.model.MARK_I.VisionCell;
+
 
 /**
  * @author Quinn Liu (quinnliu@vt.edu)

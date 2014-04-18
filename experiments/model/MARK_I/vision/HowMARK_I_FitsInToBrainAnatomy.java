@@ -1,22 +1,13 @@
 package model.MARK_I.vision;
 
-import model.MARK_I.connectTypes.RegionToRegionConnectInterface;
-import model.MARK_I.connectTypes.RegionToRegionRectangleConnect;
-import model.MARK_I.connectTypes.SensorCellsToRegionConnectInterface;
-import model.MARK_I.connectTypes.SensorCellsToRegionRectangleConnect;
+import main.java.model.*;
+import main.java.model.MARK_I.*;
+import main.java.model.MARK_I.connectTypes.*;
+import main.java.model.util.*;
 
-import model.MARK_I.ColumnPosition;
-import model.MARK_I.Neocortex;
-import model.MARK_I.Region;
-import model.MARK_I.SpatialPooler;
-
-import model.util.JsonFileInputOutput;
 import com.google.gson.Gson;
 import java.util.Set;
 import java.io.IOException;
-import model.Retina;
-import model.NervousSystem;
-import model.LGN;
 
 /**
  * @author Quinn Liu (quinnliu@vt.edu)

@@ -1,6 +1,6 @@
-package model.MARK_I;
+package main.java.model.MARK_I;
 
-import model.MARK_I.Segment.SynapseUpdateState;
+import main.java.model.MARK_I.Segment.SynapseUpdateState;
 
 import java.util.List;
 import java.util.ArrayList;
@@ -212,7 +212,7 @@ public class Column {
 	return this.activeDutyCycle;
     }
 
-    void setActiveDutyCycle(float activeDutyCycle) {
+    public void setActiveDutyCycle(float activeDutyCycle) {
 	if (activeDutyCycle < 0 || activeDutyCycle > 1) {
 	    throw new IllegalArgumentException(
 		    "activeDutyCycle in Column class setActiveDutyCycle method must >= 0 & <= 1");

@@ -1,7 +1,7 @@
-package model.MARK_I.SDR;
+package main.java.model.MARK_I.SDR;
 
+import main.java.model.MARK_I.ColumnPosition;
 import java.util.Set;
-import model.MARK_I.ColumnPosition;
 
 /**
  * Uses the equation found here https://github.com/quinnliu/WalnutiQ/issues/21

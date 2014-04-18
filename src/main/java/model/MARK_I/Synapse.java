@@ -1,6 +1,4 @@
-package model.MARK_I;
-
-import model.MARK_I.Cell;
+package main.java.model.MARK_I;
 
 /**
  * A data structure that partly represents the connection strength from a
@@ -205,12 +203,11 @@ public class Synapse<CellType extends Cell> {
 	return true;
     }
 
-    // package visible methods for test classes in the tests folder
     public double getPermanenceValue() {
 	return this.permanenceValue;
     }
 
-    void setPermanenceValue(double permanenceValue) {
+    public void setPermanenceValue(double permanenceValue) {
 	this.permanenceValue = permanenceValue;
     }
 }

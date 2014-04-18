@@ -1,12 +1,11 @@
-package model.MARK_I.connectTypes;
+package test.java.model.MARK_I.connectTypes;
 
-import model.MARK_I.connectTypes.SensorCellsToRegionConnectInterface;
-import model.MARK_I.connectTypes.SensorCellsToRegionRectangleConnect;
-
-import model.MARK_I.Column;
-import model.MARK_I.Region;
-import model.MARK_I.SensorCell;
-import model.MARK_I.VisionCell;
+import main.java.model.MARK_I.Column;
+import main.java.model.MARK_I.VisionCell;
+import main.java.model.MARK_I.SensorCell;
+import main.java.model.MARK_I.Region;
+import main.java.model.MARK_I.connectTypes.SensorCellsToRegionRectangleConnect;
+import main.java.model.MARK_I.connectTypes.SensorCellsToRegionConnectInterface;
 
 /**
  * @author Quinn Liu (quinnliu@vt.edu)
@@ -33,8 +32,7 @@ public class SensorCellsToRegionRectangleConnectTest extends
 	this.connectType.connect(sensorCells, leafRegion, 2, 2);
 
 	Column[][] columns = leafRegion.getColumns();
-	for (int parentColumnX = 0; parentColumnX < leafRegion
-		.getXAxisLength(); parentColumnX++) {
+	for (int parentColumnX = 0; parentColumnX < leafRegion.getXAxisLength(); parentColumnX++) {
 	    for (int parentColumnY = 0; parentColumnY < leafRegion
 		    .getYAxisLength(); parentColumnY++) {
 		assertEquals(100, columns[parentColumnX][parentColumnY]
@@ -42,5 +40,4 @@ public class SensorCellsToRegionRectangleConnectTest extends
 	    }
 	}
     }
-
 }

@@ -1,7 +1,7 @@
-package model.MARK_I.connectTypes;
+package main.java.model.MARK_I.connectTypes;
 
-import model.MARK_I.Region;
-import model.MARK_I.SensorCell;
+import main.java.model.MARK_I.Region;
+import main.java.model.MARK_I.SensorCell;
 
 /**
  * @author Quinn Liu (quinnliu@vt.edu)

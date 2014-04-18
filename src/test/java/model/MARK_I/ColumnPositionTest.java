@@ -1,6 +1,6 @@
-package model.MARK_I;
+package test.java.model.MARK_I;
 
-import model.MARK_I.ColumnPosition;
+import main.java.model.MARK_I.ColumnPosition;
 
 /**
  * @author Quinn Liu (quinnliu@vt.edu)

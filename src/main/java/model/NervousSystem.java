@@ -1,6 +1,6 @@
-package model;
+package main.java.model;
 
-import model.MARK_I.Neocortex;
+import main.java.model.MARK_I.Neocortex;
 
 /**
  * @author Quinn Liu (quinnliu@vt.edu)

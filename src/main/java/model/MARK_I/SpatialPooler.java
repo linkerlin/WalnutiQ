@@ -1,4 +1,4 @@
-package model.MARK_I;
+package main.java.model.MARK_I;
 
 import java.awt.Dimension;
 import java.util.ArrayList;
@@ -80,7 +80,7 @@ public class SpatialPooler extends Pooler {
      * Column's overlapScore is below minOverlap, that Column's overlapScore is
      * set to 0.
      */
-    void computeColumnOverlapScore(Column column) {
+    public void computeColumnOverlapScore(Column column) {
 	if (column == null) {
 	    throw new IllegalArgumentException(
 		    "the Column in SpatialPooler method computeColumnOverlapScore cannot be null");
@@ -105,7 +105,7 @@ public class SpatialPooler extends Pooler {
      * activeColumns(t)-the list of Columns that win due to the bottom-up input
      * at time t.
      */
-    void computeActiveColumnsOfRegion() {
+    public void computeActiveColumnsOfRegion() {
 	// remove old active columns from last time spatial pooling was called
 	this.activeColumns.clear();
 	this.activeColumnPositions.clear();
@@ -148,7 +148,7 @@ public class SpatialPooler extends Pooler {
      * as Hebb's Rule. The inhibitionRadius for the Region is also computed and
      * updated here.
      */
-    void regionLearnOneTimeStep() {
+    public void regionLearnOneTimeStep() {
 	Column[][] columns = this.region.getColumns();
 
 	if (super.getLearningState()) {
@@ -253,7 +253,7 @@ public class SpatialPooler extends Pooler {
      * @param columnYAxis
      *            position of Column within Region along y-axis
      */
-    void updateNeighborColumns(int columnXAxis, int columnYAxis) {
+    public void updateNeighborColumns(int columnXAxis, int columnYAxis) {
 	if (columnXAxis < 0 || columnXAxis > this.region.getXAxisLength()
 		|| columnYAxis < 0
 		|| columnYAxis > this.region.getYAxisLength()) {
@@ -309,7 +309,7 @@ public class SpatialPooler extends Pooler {
      * @return the kth highest overlapScore value of a Column object within the
      *         neighborColumns list.
      */
-    int kthScoreOfColumns(List<Column> neighborColumns, int desiredLocalActivity) {
+    public int kthScoreOfColumns(List<Column> neighborColumns, int desiredLocalActivity) {
 	if (neighborColumns == null) {
 	    throw new IllegalArgumentException(
 		    "neighborColumns in SpatialPooler method kthScoreOfColumns cannot be null");
@@ -341,7 +341,7 @@ public class SpatialPooler extends Pooler {
      *
      * @return The average connected receptive field size.
      */
-    double averageReceptiveFieldSizeOfRegion() {
+    public double averageReceptiveFieldSizeOfRegion() {
 	double regionAverageReceptiveField = 0.0;
 
 	// for each column
@@ -401,7 +401,7 @@ public class SpatialPooler extends Pooler {
      * than minimumDutyOverlap. Exponential Moving Average(EMA): St = a * Yt +
      * (1 - a) * St - 1.
      */
-    void updateOverlapDutyCycle(int columnXAxis, int columnYAxis) {
+    public void updateOverlapDutyCycle(int columnXAxis, int columnYAxis) {
 	if (columnXAxis < 0 || columnXAxis > this.region.getXAxisLength()
 		|| columnYAxis < 0
 		|| columnYAxis > this.region.getYAxisLength()) {

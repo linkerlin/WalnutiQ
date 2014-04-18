@@ -1,4 +1,4 @@
-package model;
+package main.java.model;
 
 /**
  * "Relay station" for all sensory information(except smell) which

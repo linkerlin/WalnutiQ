@@ -1,6 +1,4 @@
-package model.MARK_I;
-
-import model.MARK_I.Cell;
+package main.java.model.MARK_I;
 
 import java.util.Set;
 import java.util.HashSet;
@@ -125,8 +123,7 @@ public class Segment {
 	return numberOfActiveSynapses;
     }
 
-    // package visible methods for test classes in the tests folder
-    boolean removeSynapse(Synapse synapseToRemove) {
+    public boolean removeSynapse(Synapse synapseToRemove) {
 	for (Synapse synapse : this.synapses) {
 	    if (synapseToRemove.getConnectedCell().getClass()
 		    .equals(synapse.getConnectedCell().getClass())
@@ -143,7 +140,7 @@ public class Segment {
 	return false;
     }
 
-    Synapse getSynapse(int cellXPosition, int cellYPosition) {
+    public Synapse getSynapse(int cellXPosition, int cellYPosition) {
 	for (Synapse synapse : this.synapses) {
 	    if (synapse.getCellXPosition() == cellXPosition
 		    && synapse.getCellYPosition() == cellYPosition) {

@@ -1,4 +1,4 @@
-package model;
+package main.java.model;
 
 /**
  * Nerves connecting to voluntary skeletal muscles and sensory receptors using

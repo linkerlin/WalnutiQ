@@ -1,4 +1,4 @@
-package model.MARK_I;
+package main.java.model.MARK_I;
 
 /**
  * A data structure that represents a single input bit from an external sensor

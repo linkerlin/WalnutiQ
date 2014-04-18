@@ -1,13 +1,11 @@
 package model.MARK_I.vision;
 
+import main.java.model.*;
+import main.java.model.MARK_I.*;
+import main.java.model.MARK_I.connectTypes.*;
+
 import java.util.Set;
 import java.io.IOException;
-import model.Retina;
-import model.MARK_I.ColumnPosition;
-import model.MARK_I.connectTypes.SensorCellsToRegionConnectInterface;
-import model.MARK_I.connectTypes.SensorCellsToRegionRectangleConnect;
-import model.MARK_I.Region;
-import model.MARK_I.SpatialPooler;
 
 /**
  * -------------------------------Purpose---------------------------------------

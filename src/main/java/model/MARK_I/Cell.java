@@ -1,4 +1,4 @@
-package model.MARK_I;
+package main.java.model.MARK_I;
 
 /**
  * Provides the minimal behaviors for a Cell.

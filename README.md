@@ -45,8 +45,7 @@ programming. Make sure to read Numenta's great explanation
 of their research in this [white paper](https://db.tt/FuQWQuwE) 
 to better understand the theory behind this repository.
 
-## Setup in Linux/Mac/Windows with Eclipse(like Microsoft Word
-## but for writing code)
+## Setup in Linux/Mac/Windows with Eclipse(like Microsoft Word but for writing code)
 1. [Install Eclipse](http://wiki.eclipse.org/Eclipse/Installation)
 
 2. Fork this repository and clone it locally. Then import it as a 
@@ -56,17 +55,21 @@ project into Eclipse.
    To fix this right click your `src` folder then hover over "New", 
    then click "Source Folder". Then give it the "Folder name:" src. 
    You will also need to do this same process for the folders 
-   `tests`, `images`, and `experiments`. Make sure 
-   when you type the "Folder name:" you put in the folder name of 
+   `experiments` and `images`. Make sure when you type the 
+   "Folder name:" you put in the folder name of 
    the folder you previously just right clicked.
 
 4. In Eclipse, add all the libraries (.jar file) in the folder 
-   `referencedLibraries/` by right-clicking your project in 
-   the package explorer => Build Path => Add External Archives...
+   `referencedLibraries/` by right-clicking your project `WalnutiQ` 
+   in the package explorer `=>` Build Path `=>` Add External Archives...
 
-5. In Eclipse, also add JUnit 4 & jre7 to your build path. Then 
-   right click the `WalnutiQ/` folder and select "Run As" => 
-   "JUnit Test". Make sure all tests pass!
+5. In Eclipse, add JUnit 4 by right-clicking your project `WalnutiQ` 
+   in the package explorer `=>` Add Libraries... `=>` JUnit `=>`
+   Next > `=>` Finish
+
+6. In Eclipse, also add JRE System Library by right-clicking 
+   your project `WalnutiQ` in the package explorer `=>` 
+   Add Libraries... `=>` JRE System Library `=>` Next > `=>` Finish
   
 ## Setup in Linux/Mac/Windows with Gradle(Builds our Java code)
 1. Install Gradle in Linux OR Mac by typing to the command line:
@@ -104,11 +107,14 @@ project into Eclipse.
             + [vision](./experiments/model/MARK_I/vision) = experiments with partial 
               visual pathway models on a popular handwritten digit data
               set called MNIST
+  - gradle = @linkerlin what is this for?
   - images
       + digits
           - [MNIST](./images/digits/MNIST) = unique files that contain training images 
             and testing images
-      + model = images used in testing the MARK I model
+      + main
+        - java
+          + [model](./images/main/java/model) = images used in testing the MARK I model
   - referencedLibraries = contains .jar files(of other people's code) needed to run WalnutiQ
   - src
       + main
@@ -140,7 +146,7 @@ project into Eclipse.
                   but it would be very cool of you to do something nice with it.
   - README.md = the file you are reading right now
   - build.gradle = Groovy language code for compiling all of the code in this repository using Gradle
-  - gradlew.bat = ??? https://github.com/quinnliu/WalnutiQ/issues/49
+  - gradlew.bat = @linkerlin what is this for?
 
 ===============================================================
 Please contact me at quinnliu@vt.edu if you have any questions! 

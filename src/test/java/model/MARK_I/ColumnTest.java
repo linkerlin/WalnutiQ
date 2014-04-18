@@ -1,7 +1,7 @@
-package model.MARK_I;
+package test.java.model.MARK_I;
 
-import model.MARK_I.Column;
-import model.MARK_I.Neuron;
+import main.java.model.MARK_I.Neuron;
+import main.java.model.MARK_I.Column;
 
 /**
  * @author Quinn Liu (quinnliu@vt.edu)

@@ -1,15 +1,16 @@
-package model.MARK_I.SDR;
+package main.java.model.MARK_I.SDR;
+
+import main.java.model.MARK_I.connectTypes.SensorCellsToRegionRectangleConnect;
+import main.java.model.MARK_I.ColumnPosition;
+import main.java.model.MARK_I.SpatialPooler;
+import main.java.model.MARK_I.connectTypes.SensorCellsToRegionConnectInterface;
+import main.java.model.MARK_I.Region;
+import main.java.model.Retina;
 
 import java.io.FileWriter;
 import java.io.BufferedWriter;
 import java.util.Set;
-import model.MARK_I.ColumnPosition;
 import java.io.IOException;
-import model.MARK_I.SpatialPooler;
-import model.MARK_I.connectTypes.SensorCellsToRegionConnectInterface;
-import model.MARK_I.connectTypes.SensorCellsToRegionRectangleConnect;
-import model.MARK_I.Region;
-import model.Retina;
 
 /**
  * Why: There are about a dozen parameters that are very important to how the

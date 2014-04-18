@@ -1,4 +1,4 @@
-package model.MARK_I;
+package main.java.model.MARK_I;
 
 /**
  * Simulates a cortical pyramidal cell.

@@ -1,6 +1,6 @@
-package model;
+package main.java.model;
 
-import model.MARK_I.Neocortex;
+import main.java.model.MARK_I.Neocortex;
 
 /**
  * @author Quinn Liu (quinnliu@vt.edu)
@@ -12,7 +12,7 @@ public class CNS {
     /**
      * Things the spinal cord does for you:
      * 1) Local feedback loops control reflexes.
-     * 2) Descending motor control signals from the 
+     * 2) Descending motor control signals from the
      * brain activae spinal motor neurons.
      * 3) Ascending sensory axons convey sensory
      * information (from muscles and skin) back to the brain.
