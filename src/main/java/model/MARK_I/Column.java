@@ -1,9 +1,9 @@
-package main.java.model.MARK_I;
+package model.MARK_I;
 
-import main.java.model.MARK_I.Segment.SynapseUpdateState;
+import model.MARK_I.Segment.SynapseUpdateState;
 
-import java.util.List;
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * A data structure that represents a single Column of Neurons within a Region
@@ -23,11 +23,11 @@ public class Column {
     // of spatial pooling
     private boolean isActive;
 
-    private final Neuron[] neurons;
+    private final model.MARK_I.Neuron[] neurons;
 
     private final Segment proximalSegment;
 
-    private List<ColumnPosition> neighborColumnPositions;
+    private List<model.MARK_I.ColumnPosition> neighborColumnPositions;
 
     private int overlapScore;
 
@@ -62,12 +62,12 @@ public class Column {
 		    "numberOfCells in Column class constructor cannot be less than 1");
 	} else {
 	    this.isActive = false;
-	    this.neurons = new Neuron[numberOfCells];
+	    this.neurons = new model.MARK_I.Neuron[numberOfCells];
 	    for (int i = 0; i < numberOfCells; i++) {
-		this.neurons[i] = new Neuron();
+		this.neurons[i] = new model.MARK_I.Neuron();
 	    }
-	    this.proximalSegment = new ProximalSegment();
-	    this.neighborColumnPositions = new ArrayList<ColumnPosition>();
+	    this.proximalSegment = new model.MARK_I.ProximalSegment();
+	    this.neighborColumnPositions = new ArrayList<model.MARK_I.ColumnPosition>();
 	    this.overlapScore = 0;
 	    this.boostValue = 1.0f;
 	    this.activeDutyCycle = 1.0f; // Must be greater than 0, or will stay
@@ -161,15 +161,15 @@ public class Column {
 	return this.isActive;
     }
 
-    public Neuron[] getNeurons() {
+    public model.MARK_I.Neuron[] getNeurons() {
 	return this.neurons;
     }
 
-    public List<ColumnPosition> getNeighborColumns() {
+    public List<model.MARK_I.ColumnPosition> getNeighborColumns() {
 	return this.neighborColumnPositions;
     }
 
-    public void setNeighborColumns(List<ColumnPosition> neighborColumns) {
+    public void setNeighborColumns(List<model.MARK_I.ColumnPosition> neighborColumns) {
 	if (neighborColumns == null) {
 	    throw new IllegalArgumentException(
 		    "neighborColumns in Column class setNeighborColumns method cannot be null");

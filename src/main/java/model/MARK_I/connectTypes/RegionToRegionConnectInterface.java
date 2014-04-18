@@ -1,6 +1,6 @@
-package main.java.model.MARK_I.connectTypes;
+package model.MARK_I.connectTypes;
 
-import main.java.model.MARK_I.Region;
+import model.MARK_I.Region;
 
 /**
  * @author Quinn Liu (quinnliu@vt.edu)

@@ -1,11 +1,11 @@
 package test.java.model.MARK_I;
 
-import main.java.model.MARK_I.Segment.SynapseUpdateState;
-import main.java.model.MARK_I.Cell;
-import main.java.model.MARK_I.Synapse;
-import main.java.model.MARK_I.VisionCell;
-import main.java.model.MARK_I.ProximalSegment;
-import main.java.model.MARK_I.Segment;
+import model.MARK_I.Segment.SynapseUpdateState;
+import model.MARK_I.Cell;
+import model.MARK_I.Synapse;
+import model.MARK_I.VisionCell;
+import model.MARK_I.ProximalSegment;
+import model.MARK_I.Segment;
 
 
 

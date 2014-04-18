@@ -1,13 +1,13 @@
-package main.java.model.MARK_I.connectTypes;
+package model.MARK_I.connectTypes;
 
-import main.java.model.MARK_I.SensorCell;
-import main.java.model.MARK_I.Region;
+import model.MARK_I.Region;
+import model.MARK_I.SensorCell;
 
 /**
  * @author Quinn Liu (quinnliu@vt.edu)
  * @version June 7, 2013
  */
-public class SensorCellsToRegionCircleConnect implements SensorCellsToRegionConnectInterface {
+public class SensorCellsToRegionCircleConnect implements model.MARK_I.connectTypes.SensorCellsToRegionConnectInterface {
 
     @Override
     public void connect(SensorCell[][] sensorCells, Region region,

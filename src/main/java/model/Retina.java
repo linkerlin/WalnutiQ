@@ -1,6 +1,6 @@
-package main.java.model;
+package model;
 
-import main.java.model.MARK_I.VisionCell;
+import model.MARK_I.VisionCell;
 
 import java.awt.Color;
 import java.awt.image.BufferedImage;

@@ -1,6 +1,6 @@
-package main.java.model.MARK_I;
+package model.MARK_I;
 
-import main.java.model.MARK_I.connectTypes.RegionToRegionConnectInterface;
+import model.MARK_I.connectTypes.RegionToRegionConnectInterface;
 
 /**
  * Neocortex is a undirected tree of Regions. Creating a Neocortex with multiple

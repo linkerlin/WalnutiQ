@@ -1,14 +1,14 @@
 package test.java.model.util;
 
-import main.java.model.util.JsonFileInputOutput;
-import main.java.model.MARK_I.Column;
+import model.util.JsonFileInputOutput;
+import model.MARK_I.Column;
 import java.util.Set;
-import main.java.model.MARK_I.connectTypes.SensorCellsToRegionRectangleConnect;
-import main.java.model.MARK_I.SpatialPooler;
+import model.MARK_I.connectTypes.SensorCellsToRegionRectangleConnect;
+import model.MARK_I.SpatialPooler;
 import java.io.IOException;
-import main.java.model.MARK_I.connectTypes.SensorCellsToRegionConnectInterface;
-import main.java.model.Retina;
-import main.java.model.MARK_I.Region;
+import model.MARK_I.connectTypes.SensorCellsToRegionConnectInterface;
+import model.Retina;
+import model.MARK_I.Region;
 import com.google.gson.Gson;
 
 /**

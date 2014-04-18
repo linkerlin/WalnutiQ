@@ -1,6 +1,6 @@
-package main.java.model;
+package model;
 
-import main.java.model.MARK_I.Region;
+import model.MARK_I.Region;
 
 /**
  * Input into LGN: activity of Cells within Retina.

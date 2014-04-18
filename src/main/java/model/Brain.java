@@ -1,6 +1,6 @@
-package main.java.model;
+package model;
 
-import main.java.model.MARK_I.Neocortex;
+import model.MARK_I.Neocortex;
 
 /**
  * Adult human brains contain about 10^11 neurons with 10^3 synapses each for a

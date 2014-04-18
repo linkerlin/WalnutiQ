@@ -1,8 +1,8 @@
 package test.java.model.MARK_I;
 
-import main.java.model.MARK_I.Cell;
-import main.java.model.MARK_I.Synapse;
-import main.java.model.MARK_I.VisionCell;
+import model.MARK_I.Cell;
+import model.MARK_I.Synapse;
+import model.MARK_I.VisionCell;
 
 
 /**

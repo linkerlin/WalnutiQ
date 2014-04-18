@@ -1,7 +1,7 @@
-package main.java.model.MARK_I;
+package model.MARK_I;
 
-import java.util.Set;
 import java.util.HashSet;
+import java.util.Set;
 
 /**
  * Provides the base implementation for a DistalSegment and ProximalSegment.
@@ -11,7 +11,7 @@ import java.util.HashSet;
  * @version July 22, 2013
  */
 public class Segment {
-    protected Set<Synapse<Cell>> synapses;
+    protected Set<model.MARK_I.Synapse<Cell>> synapses;
 
     /**
      * Minimal percent of active Synapses out of total Synapses needed for a
@@ -45,7 +45,7 @@ public class Segment {
     }
 
     public Segment() {
-	this.synapses = new HashSet<Synapse<Cell>>();
+	this.synapses = new HashSet<model.MARK_I.Synapse<Cell>>();
     }
 
     /**
@@ -55,7 +55,7 @@ public class Segment {
      */
     public boolean getActiveState() {
 	int numberOfActiveSynapses = 0;
-	for (Synapse<Cell> synapse : this.synapses) {
+	for (model.MARK_I.Synapse<Cell> synapse : this.synapses) {
 	    Cell abstractCell = synapse.getConnectedCell();
 	    if (synapse.isConnected() && abstractCell.getActiveState()) {
 		numberOfActiveSynapses++;
@@ -82,7 +82,7 @@ public class Segment {
 	    throw new IllegalArgumentException(
 		    "updateState in Segment method updateSynapsePermanences cannot be null");
 	}
-	for (Synapse<Cell> synapse : this.synapses) {
+	for (model.MARK_I.Synapse<Cell> synapse : this.synapses) {
 	    switch (updateState) {
 	    case INCREASE_ACTIVE:
 		if (synapse.isConnected()
@@ -100,21 +100,21 @@ public class Segment {
 	}
     }
 
-    public void addSynapse(Synapse<Cell> synapse) {
+    public void addSynapse(model.MARK_I.Synapse<Cell> synapse) {
 	if (synapse == null) {
 	    throw new IllegalArgumentException(
 		    "Synapse in Segment class method addSynapse cannot be null");
 	}
-	this.synapses.add((Synapse<Cell>) synapse);
+	this.synapses.add((model.MARK_I.Synapse<Cell>) synapse);
     }
 
-    public Set<Synapse<Cell>> getSynapses() {
+    public Set<model.MARK_I.Synapse<Cell>> getSynapses() {
 	return this.synapses;
     }
 
     public int getNumberOfActiveSynapses() {
 	int numberOfActiveSynapses = 0;
-	for (Synapse synapse : synapses) {
+	for (model.MARK_I.Synapse synapse : synapses) {
 	    Cell cell = (Cell) synapse.getConnectedCell();
 	    if (cell != null && cell.getActiveState()) {
 		numberOfActiveSynapses++;
@@ -123,8 +123,8 @@ public class Segment {
 	return numberOfActiveSynapses;
     }
 
-    public boolean removeSynapse(Synapse synapseToRemove) {
-	for (Synapse synapse : this.synapses) {
+    public boolean removeSynapse(model.MARK_I.Synapse synapseToRemove) {
+	for (model.MARK_I.Synapse synapse : this.synapses) {
 	    if (synapseToRemove.getConnectedCell().getClass()
 		    .equals(synapse.getConnectedCell().getClass())
 		    && synapseToRemove.getPermanenceValue() == synapse
@@ -140,8 +140,8 @@ public class Segment {
 	return false;
     }
 
-    public Synapse getSynapse(int cellXPosition, int cellYPosition) {
-	for (Synapse synapse : this.synapses) {
+    public model.MARK_I.Synapse getSynapse(int cellXPosition, int cellYPosition) {
+	for (model.MARK_I.Synapse synapse : this.synapses) {
 	    if (synapse.getCellXPosition() == cellXPosition
 		    && synapse.getCellYPosition() == cellYPosition) {
 		return synapse;
@@ -150,10 +150,10 @@ public class Segment {
 	return null;
     }
 
-    public Set<Synapse<Cell>> getConnectedSynapses() {
-	Set<Synapse<Cell>> connectedSynapes = new HashSet<Synapse<Cell>>();
+    public Set<model.MARK_I.Synapse<Cell>> getConnectedSynapses() {
+	Set<model.MARK_I.Synapse<Cell>> connectedSynapes = new HashSet<model.MARK_I.Synapse<Cell>>();
 
-	for (Synapse<Cell> synapse : this.synapses) {
+	for (model.MARK_I.Synapse<Cell> synapse : this.synapses) {
 	    if (synapse.getConnectedCell() != null) {
 		connectedSynapes.add(synapse);
 	    }

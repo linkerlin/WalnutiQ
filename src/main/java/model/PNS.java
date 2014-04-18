@@ -1,4 +1,6 @@
-package main.java.model;
+package model;
+
+import model.Retina;
 
 /**
  * @author Quinn Liu (quinnliu@vt.edu)

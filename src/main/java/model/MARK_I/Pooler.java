@@ -1,4 +1,4 @@
-package main.java.model.MARK_I;
+package model.MARK_I;
 
 /**
  * Abstract class extended by SpatialPooler.java and TemporalPooler.java classes.

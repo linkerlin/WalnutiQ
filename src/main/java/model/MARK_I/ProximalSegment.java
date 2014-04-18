@@ -1,4 +1,4 @@
-package main.java.model.MARK_I;
+package model.MARK_I;
 
 /**
  * Input to ProximalSegment: activity of active Synapses connected to this Segment.

@@ -1,6 +1,6 @@
 package test.java.model.MARK_I.SDR;
 
-import main.java.model.MARK_I.SDR.FindOptimalParametersForSDR;
+import model.MARK_I.SDR.FindOptimalParametersForSDR;
 import java.io.IOException;
 
 /**

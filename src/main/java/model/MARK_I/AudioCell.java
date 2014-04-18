@@ -1,4 +1,4 @@
-package main.java.model.MARK_I;
+package model.MARK_I;
 
 /**
  * A data structure that represents a single audio cell within the cochlea.

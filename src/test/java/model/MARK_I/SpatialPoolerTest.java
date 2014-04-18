@@ -1,30 +1,30 @@
 package test.java.model.MARK_I;
 
-import main.java.model.MARK_I.Segment;
+import model.MARK_I.Segment;
 
-import main.java.model.util.RegionConsoleViewer;
+import model.util.RegionConsoleViewer;
 
-import main.java.model.MARK_I.Cell;
+import model.MARK_I.Cell;
 
-import main.java.model.MARK_I.Synapse;
+import model.MARK_I.Synapse;
 
-import main.java.model.MARK_I.Column;
+import model.MARK_I.Column;
 
-import main.java.model.MARK_I.ColumnPosition;
+import model.MARK_I.ColumnPosition;
 
-import main.java.model.MARK_I.connectTypes.SensorCellsToRegionRectangleConnect;
+import model.MARK_I.connectTypes.SensorCellsToRegionRectangleConnect;
 
-import main.java.model.MARK_I.connectTypes.SensorCellsToRegionConnectInterface;
+import model.MARK_I.connectTypes.SensorCellsToRegionConnectInterface;
 
-import main.java.model.Retina;
+import model.Retina;
 
-import main.java.model.MARK_I.connectTypes.RegionToRegionRectangleConnect;
+import model.MARK_I.connectTypes.RegionToRegionRectangleConnect;
 
-import main.java.model.MARK_I.connectTypes.RegionToRegionConnectInterface;
+import model.MARK_I.connectTypes.RegionToRegionConnectInterface;
 
-import main.java.model.MARK_I.SpatialPooler;
+import model.MARK_I.SpatialPooler;
 
-import main.java.model.MARK_I.Region;
+import model.MARK_I.Region;
 
 import java.io.IOException;
 import java.util.Set;

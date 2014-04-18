@@ -1,10 +1,10 @@
 package test.java.model.MARK_I.connectTypes;
 
-import main.java.model.MARK_I.Column;
-import main.java.model.MARK_I.VisionCell;
-import main.java.model.MARK_I.SensorCell;
-import main.java.model.MARK_I.Region;
-import main.java.model.MARK_I.connectTypes.SensorCellsToRegionRandomConnect;
+import model.MARK_I.Column;
+import model.MARK_I.VisionCell;
+import model.MARK_I.SensorCell;
+import model.MARK_I.Region;
+import model.MARK_I.connectTypes.SensorCellsToRegionRandomConnect;
 
 /**
  * @author Quinn Liu (quinnliu@vt.edu)

@@ -1,11 +1,8 @@
-package main.java.model.MARK_I;
+package model.MARK_I;
 
-import java.awt.Dimension;
-import java.util.ArrayList;
-import java.util.TreeSet;
+import java.awt.*;
+import java.util.*;
 import java.util.List;
-import java.util.Set;
-import java.util.HashSet;
 
 /**
  * Provides implementation for running the spatial learning algorithm on a
@@ -366,7 +363,7 @@ public class SpatialPooler extends Pooler {
 		// iterates over every connected Synapses and sums the
 		// distances from it's origin Column to determine the
 		// average receptive field for this Column
-		for (Synapse<?> connectedSynapse : connectedSynapes) {
+		for (model.MARK_I.Synapse<?> connectedSynapse : connectedSynapes) {
 
 		    double dx = Math.abs(columnX
 			    - connectedSynapse.getCellXPosition());

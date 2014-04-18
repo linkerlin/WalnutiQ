@@ -1,10 +1,10 @@
-package main.java.model.MARK_I.connectTypes;
+package model.MARK_I.connectTypes;
 
-import main.java.model.MARK_I.Cell;
-import main.java.model.MARK_I.Synapse;
-import main.java.model.MARK_I.Column;
-import main.java.model.MARK_I.Region;
-import main.java.model.MARK_I.SensorCell;
+import model.MARK_I.Cell;
+import model.MARK_I.Synapse;
+import model.MARK_I.Column;
+import model.MARK_I.Region;
+import model.MARK_I.SensorCell;
 
 /**
  * @author Quinn Liu (quinnliu@vt.edu)

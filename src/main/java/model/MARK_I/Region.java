@@ -1,9 +1,9 @@
-package main.java.model.MARK_I;
+package model.MARK_I;
 
-import java.awt.Dimension;
-import java.util.Set;
-import java.util.List;
+import java.awt.*;
 import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
 
 /**
  * Node within Neocortex tree. A Region object is an undirected graph of Neuron
@@ -152,11 +152,11 @@ public class Region {
 
 	// now find input layer x and y axis lengths whether the input layer
 	// is a SensorCellLayer or a Region
-	Set<Synapse<Cell>> synapses = columnWithLargestIndex
+	Set<model.MARK_I.Synapse<Cell>> synapses = columnWithLargestIndex
 		.getProximalSegment().getSynapses();
 	int greatestSynapseXIndex = 0;
 	int greatestSynapseYIndex = 0;
-	for (Synapse synapse : synapses) {
+	for (model.MARK_I.Synapse synapse : synapses) {
 	    if (synapse.getCellXPosition() > greatestSynapseXIndex) {
 		greatestSynapseXIndex = synapse.getCellXPosition();
 	    }

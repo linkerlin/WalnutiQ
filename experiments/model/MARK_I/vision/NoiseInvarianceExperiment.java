@@ -1,11 +1,10 @@
 package model.MARK_I.vision;
 
-import main.java.model.*;
-import main.java.model.MARK_I.*;
-import main.java.model.MARK_I.connectTypes.*;
+import model.MARK_I.Region;
+import model.Retina;
 
-import java.util.Set;
 import java.io.IOException;
+import java.util.Set;
 
 /**
  * -------------------------------Purpose---------------------------------------
@@ -27,8 +26,8 @@ import java.io.IOException;
  */
 public class NoiseInvarianceExperiment extends junit.framework.TestCase {
     private Retina retina;
-    private Region region;
-    private SpatialPooler spatialPooler;
+    private model.MARK_I.Region region;
+    private model.MARK_I.SpatialPooler spatialPooler;
 
     public void setUp() {
 	// images this retina will see in folder images/model/ are 66x66 pixels
@@ -36,10 +35,10 @@ public class NoiseInvarianceExperiment extends junit.framework.TestCase {
 
 	this.region = new Region("Region", 8, 8, 1, 40, 3);
 
-	SensorCellsToRegionConnectInterface retinaToRegion = new SensorCellsToRegionRectangleConnect();
+	model.MARK_I.connectTypes.SensorCellsToRegionConnectInterface retinaToRegion = new model.MARK_I.connectTypes.SensorCellsToRegionRectangleConnect();
 	retinaToRegion.connect(this.retina.getVisionCells(), this.region, 0, 0);
 
-	this.spatialPooler = new SpatialPooler(this.region);
+	this.spatialPooler = new model.MARK_I.SpatialPooler(this.region);
 	this.spatialPooler.setLearningState(true);
     }
 
@@ -49,11 +48,11 @@ public class NoiseInvarianceExperiment extends junit.framework.TestCase {
 	this.retina.seeBMPImage("2.bmp");
 
 	this.spatialPooler.performSpatialPoolingOnRegion();
-	Set<ColumnPosition> columnActivityAfterSeeingImage2 = this.spatialPooler
+	Set<model.MARK_I.ColumnPosition> columnActivityAfterSeeingImage2 = this.spatialPooler
 		.getActiveColumnPositions();
 	assertEquals(13, columnActivityAfterSeeingImage2.size());
 
-	for (ColumnPosition columnPosition : columnActivityAfterSeeingImage2) {
+	for (model.MARK_I.ColumnPosition columnPosition : columnActivityAfterSeeingImage2) {
 	    System.out.println(columnPosition.toString());
 	}
 
@@ -61,7 +60,7 @@ public class NoiseInvarianceExperiment extends junit.framework.TestCase {
 	this.retina.seeBMPImage("2_with_some_noise.bmp");
 
 	this.spatialPooler.performSpatialPoolingOnRegion();
-	Set<ColumnPosition> columnActivityAfterSeeingImage2_with_some_noise = this.spatialPooler
+	Set<model.MARK_I.ColumnPosition> columnActivityAfterSeeingImage2_with_some_noise = this.spatialPooler
 		.getActiveColumnPositions();
 	assertEquals(13, columnActivityAfterSeeingImage2_with_some_noise.size());
 
@@ -72,7 +71,7 @@ public class NoiseInvarianceExperiment extends junit.framework.TestCase {
 	this.retina.seeBMPImage("2_with_alot_of_noise.bmp");
 
 	this.spatialPooler.performSpatialPoolingOnRegion();
-	Set<ColumnPosition> columnActivityAfterSeeingImage2_with_alot_of_noise = this.spatialPooler
+	Set<model.MARK_I.ColumnPosition> columnActivityAfterSeeingImage2_with_alot_of_noise = this.spatialPooler
 		.getActiveColumnPositions();
 	assertEquals(14,
 		columnActivityAfterSeeingImage2_with_alot_of_noise.size());

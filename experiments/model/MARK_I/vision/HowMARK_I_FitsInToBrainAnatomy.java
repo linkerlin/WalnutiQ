@@ -1,9 +1,9 @@
 package model.MARK_I.vision;
 
-import main.java.model.*;
-import main.java.model.MARK_I.*;
-import main.java.model.MARK_I.connectTypes.*;
-import main.java.model.util.*;
+import model.*;
+import model.MARK_I.*;
+import model.MARK_I.connectTypes.*;
+import model.util.*;
 
 import com.google.gson.Gson;
 import java.util.Set;

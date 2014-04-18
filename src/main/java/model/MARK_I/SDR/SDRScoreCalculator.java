@@ -1,6 +1,6 @@
-package main.java.model.MARK_I.SDR;
+package model.MARK_I.SDR;
 
-import main.java.model.MARK_I.ColumnPosition;
+import model.MARK_I.ColumnPosition;
 import java.util.Set;
 
 /**
