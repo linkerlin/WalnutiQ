@@ -1,27 +1,33 @@
 package model.util;
 
-import model.util.JsonFileInputOutput;
-import model.MARK_I.Column;
-import java.util.Set;
-import model.MARK_I.connectTypes.SensorCellsToRegionRectangleConnect;
-import model.MARK_I.SpatialPooler;
-import java.io.IOException;
-import model.MARK_I.connectTypes.SensorCellsToRegionConnectInterface;
-import model.Retina;
-import model.MARK_I.Region;
 import com.google.gson.Gson;
+import model.MARK_I.Column;
+import model.MARK_I.Region;
+import model.MARK_I.SpatialPooler;
+import model.MARK_I.connectTypes.SensorCellsToRegionConnectInterface;
+import model.MARK_I.connectTypes.SensorCellsToRegionRectangleConnect;
+import model.Retina;
+import org.junit.Before;
+import org.junit.Test;
+
+import java.io.IOException;
+import java.util.Set;
+
+import static org.junit.Assert.assertEquals;
 
 /**
  * @author Quinn Liu (quinnliu@vt.edu)
  * @version Feb 1, 2014
  */
-public class JsonFileInputOutputTest extends junit.framework.TestCase {
+public class JsonFileInputOutputTest {
     private Gson gson;
 
+    @Before
     public void setUp() {
 	this.gson = new Gson();
     }
 
+    @Test
     public void test_saveRegionObject() throws IOException {
 	Region LGNRegion = new Region("LGN", 8, 8, 1, 50, 3);
 
@@ -48,6 +54,7 @@ public class JsonFileInputOutputTest extends junit.framework.TestCase {
 		"./src/test/java/model/util/test_saveRegionObject.txt");
     }
 
+    @Test
     public void test_openRegionObject() throws IOException {
 	String regionAsString = JsonFileInputOutput
 		.openObjectInTextFile("./src/test/java/model/util/test_saveRegionObject.txt");

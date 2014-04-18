@@ -1,25 +1,28 @@
 package model.MARK_I.connectTypes;
 
 import model.MARK_I.Column;
-import model.MARK_I.VisionCell;
-import model.MARK_I.SensorCell;
 import model.MARK_I.Region;
-import model.MARK_I.connectTypes.SensorCellsToRegionRectangleConnect;
-import model.MARK_I.connectTypes.SensorCellsToRegionConnectInterface;
+import model.MARK_I.SensorCell;
+import model.MARK_I.VisionCell;
+import org.junit.Before;
+import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
 
 /**
  * @author Quinn Liu (quinnliu@vt.edu)
  * @version June 13, 2013
  */
-public class SensorCellsToRegionRectangleConnectTest extends
-	junit.framework.TestCase {
+public class SensorCellsToRegionRectangleConnectTest {
 
     private SensorCellsToRegionConnectInterface connectType;
 
+    @Before
     public void setUp() {
 	this.connectType = new SensorCellsToRegionRectangleConnect();
     }
 
+    @Test
     public void test_connect() {
 	Region leafRegion = new Region("leafRegion", 8, 8, 4, 20, 3);
 	SensorCell[][] sensorCells = new VisionCell[66][66];

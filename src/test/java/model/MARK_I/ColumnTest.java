@@ -1,19 +1,24 @@
 package model.MARK_I;
 
-import model.MARK_I.Neuron;
-import model.MARK_I.Column;
+import org.junit.Before;
+import org.junit.Test;
+
+import static junit.framework.TestCase.*;
+import static org.junit.Assert.assertEquals;
 
 /**
  * @author Quinn Liu (quinnliu@vt.edu)
  * @version August 3, 2013
  */
-public class ColumnTest extends junit.framework.TestCase {
+public class ColumnTest {
     private Column column;
 
+    @Before
     public void setUp() {
 	this.column = new Column(4);
     }
 
+    @Test
     public void test_Column() {
 	try {
 	    Column column = new Column(0);
@@ -44,6 +49,7 @@ public class ColumnTest extends junit.framework.TestCase {
 	assertEquals(1.0, this.column.getOverlapDutyCycle(), 0.01);
     }
 
+    @Test
     public void test_updateActiveDutyCycle() {
 	this.column.setActiveDutyCycle(0.995f);
 	this.column.updateActiveDutyCycle();
@@ -89,6 +95,7 @@ public class ColumnTest extends junit.framework.TestCase {
 	assertEquals(0.50, this.column.getActiveDutyCycle(), 0.01);
     }
 
+    @Test
     public void test_boostFunction() {
 	try {
 	    this.column.boostFunction(-0.1f);

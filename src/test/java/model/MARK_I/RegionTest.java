@@ -1,25 +1,29 @@
 package model.MARK_I;
 
-import model.MARK_I.Column;
-import model.MARK_I.connectTypes.RegionToRegionRectangleConnect;
 import model.MARK_I.connectTypes.RegionToRegionConnectInterface;
-import model.MARK_I.Region;
+import model.MARK_I.connectTypes.RegionToRegionRectangleConnect;
+import org.junit.Before;
+import org.junit.Test;
 
+import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
-import java.awt.Dimension;
+
+import static junit.framework.TestCase.fail;
+import static org.junit.Assert.assertEquals;
 
 /**
  * @author Quinn Liu (quinnliu@vt.edu)
  * @version July 29, 2013
  */
-public class RegionTest extends junit.framework.TestCase {
+public class RegionTest {
     private Region region;
-
+    @Before
     public void setUp() {
 	this.region = new Region("region", 5, 7, 4, 20, 3);
     }
 
+    @Test
     public void test_Region() {
 	try {
 	    this.region = new Region("V1", 0, 7, 4, 20, 3);
@@ -49,6 +53,7 @@ public class RegionTest extends junit.framework.TestCase {
 	}
     }
 
+    @Test
     public void test_getBottomLayerXYAxisLength() {
 	Region bottomLayer = new Region("bottomLayer", 25, 35, 1, 50, 1);
 	RegionToRegionConnectInterface connectType = new RegionToRegionRectangleConnect();
@@ -60,6 +65,7 @@ public class RegionTest extends junit.framework.TestCase {
 	assertEquals(35, bottomLayerDimensions.height);
     }
 
+    @Test
     public void test_maximumActiveDutyCycle() {
 	try {
 	    List<Column> neighborColumns = null;
@@ -88,6 +94,7 @@ public class RegionTest extends junit.framework.TestCase {
 		0.001);
     }
 
+    @Test
     public void test_toString() {
 	Region region2 = new Region("region2", 5, 7, 4, 20, 3);
 	Region region3 = new Region("region3", 5, 7, 4, 20, 3);

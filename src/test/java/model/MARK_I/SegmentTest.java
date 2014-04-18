@@ -1,12 +1,12 @@
 package model.MARK_I;
 
 import model.MARK_I.Segment.SynapseUpdateState;
-import model.MARK_I.Cell;
-import model.MARK_I.Synapse;
-import model.MARK_I.VisionCell;
-import model.MARK_I.ProximalSegment;
-import model.MARK_I.Segment;
+import org.junit.Before;
+import org.junit.Test;
 
+import static junit.framework.TestCase.assertFalse;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 
 /**
@@ -20,13 +20,15 @@ import model.MARK_I.Segment;
  * @author Quinn Liu (quinnliu@vt.edu)
  * @version July 22, 2013
  */
-public class SegmentTest extends junit.framework.TestCase {
+public class SegmentTest {
     private Segment proximalSegment;
 
+    @Before
     public void setUp() {
 	this.proximalSegment = new ProximalSegment();
     }
 
+    @Test
     public void test_getActiveState() {
 	// a Segment with 10 Synapses will have an activation threshold of 2
 	// Synapses
@@ -75,6 +77,7 @@ public class SegmentTest extends junit.framework.TestCase {
 	assertTrue(this.proximalSegment.getActiveState());
     }
 
+    @Test
     public void test_updateSynapsePermanences() {
 	// add 1 active Synapse
 	VisionCell activeVisionCell = new VisionCell();
@@ -114,6 +117,7 @@ public class SegmentTest extends junit.framework.TestCase {
 		0.0001);
     }
 
+    @Test
     public void test_addSynapse() {
 	// make sure a Segment can hold 2 Synapses that
 	// exactly the same
@@ -126,6 +130,7 @@ public class SegmentTest extends junit.framework.TestCase {
 	assertEquals(1, this.proximalSegment.getSynapses().size());
     }
 
+    @Test
     public void test_getNumberOfPreviousActiveSynapses() {
 	// case 1: a Cell was previously active and Synapse is now connected
 	VisionCell visionCell_1 = new VisionCell();

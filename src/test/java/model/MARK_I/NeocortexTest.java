@@ -1,24 +1,27 @@
 package model.MARK_I;
 
-import model.MARK_I.Column;
-import model.MARK_I.connectTypes.RegionToRegionRectangleConnect;
 import model.MARK_I.connectTypes.RegionToRegionConnectInterface;
-import model.MARK_I.Region;
-import model.MARK_I.Neocortex;
+import model.MARK_I.connectTypes.RegionToRegionRectangleConnect;
+import org.junit.Before;
+import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
 
 /**
  * @author Quinn Liu (quinnliu@vt.edu)
  * @version June 13, 2013
  */
-public class NeocortexTest extends junit.framework.TestCase {
+public class NeocortexTest {
     private Neocortex neocortex;
 
+    @Before
     public void setUp() {
 	Region rootRegion = new Region("rootRegion", 6, 8, 4, 20, 3);
 	RegionToRegionConnectInterface connectType = new RegionToRegionRectangleConnect();
 	this.neocortex = new Neocortex(rootRegion, connectType);
     }
 
+    @Test
     public void test_addToCurrentRegion() {
 	Region childRegion = new Region("childRegion", 48, 64, 4, 20, 3);
 

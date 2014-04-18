@@ -1,45 +1,33 @@
 package model.MARK_I;
 
-import model.MARK_I.Segment;
-
-import model.util.RegionConsoleViewer;
-
-import model.MARK_I.Cell;
-
-import model.MARK_I.Synapse;
-
-import model.MARK_I.Column;
-
-import model.MARK_I.ColumnPosition;
-
-import model.MARK_I.connectTypes.SensorCellsToRegionRectangleConnect;
-
-import model.MARK_I.connectTypes.SensorCellsToRegionConnectInterface;
-
-import model.Retina;
-
-import model.MARK_I.connectTypes.RegionToRegionRectangleConnect;
-
 import model.MARK_I.connectTypes.RegionToRegionConnectInterface;
-
-import model.MARK_I.SpatialPooler;
-
-import model.MARK_I.Region;
+import model.MARK_I.connectTypes.RegionToRegionRectangleConnect;
+import model.MARK_I.connectTypes.SensorCellsToRegionConnectInterface;
+import model.MARK_I.connectTypes.SensorCellsToRegionRectangleConnect;
+import model.Retina;
+import model.util.RegionConsoleViewer;
+import org.junit.Before;
+import org.junit.Test;
 
 import java.io.IOException;
-import java.util.Set;
-import java.util.List;
 import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
+
+import static junit.framework.TestCase.assertFalse;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 /**
  * @author Quinn Liu (quinnliu@vt.edu)
  * @version July 29, 2013
  */
-public class SpatialPoolerTest extends junit.framework.TestCase {
+public class SpatialPoolerTest {
 
     private Region parentRegion;
     private SpatialPooler spatialPooler;
 
+    @Before
     public void setUp() {
 	this.parentRegion = new Region("parentRegion", 8, 8, 4, 20, 3);
 	Region childRegion = new Region("childRegion", 66, 66, 4, 20, 3);
@@ -50,6 +38,7 @@ public class SpatialPoolerTest extends junit.framework.TestCase {
 	this.spatialPooler.setLearningState(true);
     }
 
+    @Test
     public void test_performSpatialPoolingOnRegion() throws IOException {
 	Region region = new Region("region", 8, 8, 4, 50, 1);
 	this.spatialPooler.changeRegion(region);
@@ -67,6 +56,7 @@ public class SpatialPoolerTest extends junit.framework.TestCase {
 	assertEquals(5, columnActivityAfterSeeingImage2.size());
     }
 
+    @Test
     public void test_computeColumnOverlapScore() {
 	// when # of active Synapses on Column
 	// proximal Segment < regionMinimumOverlapScore
@@ -111,6 +101,7 @@ public class SpatialPoolerTest extends junit.framework.TestCase {
 	assertEquals(31, columns[0][0].getOverlapScore());
     }
 
+    @Test
     public void test_computeActiveColumnsOfRegion() {
 	Column[][] columns = this.parentRegion.getColumns();
 	columns[0][0].setOverlapScore(10);
@@ -156,6 +147,7 @@ public class SpatialPoolerTest extends junit.framework.TestCase {
 	// RegionConsoleViewer.printDoubleCharArray(columnActiveStates);
     }
 
+    @Test
     public void test_regionLearnOneTimeStep() {
 	Column[][] columns = this.parentRegion.getColumns();
 	Segment proximalSegment_00 = columns[0][0].getProximalSegment();
@@ -198,6 +190,7 @@ public class SpatialPoolerTest extends junit.framework.TestCase {
 	// TODO: test the remainder of this SpatialPooler method
     }
 
+    @Test
     public void test_updateNeighborColumns() {
 	// test on Column at position (0, 0) of Region
 	this.parentRegion.setInhibitionRadius(0);
@@ -251,6 +244,7 @@ public class SpatialPoolerTest extends junit.framework.TestCase {
 	assertEquals(48, neighborColumns8.size());
     }
 
+    @Test
     public void test_kthScoreOfColumns() {
 	// change overlapScores of columns for testing
 	// the correct returning kth score
@@ -281,6 +275,7 @@ public class SpatialPoolerTest extends junit.framework.TestCase {
 	assertEquals(1, this.spatialPooler.kthScoreOfColumns(columnsList, 7));
     }
 
+    @Test
     public void test_averageReceptiveFieldSizeOfRegion() {
 	assertEquals(3.853,
 		this.spatialPooler.averageReceptiveFieldSizeOfRegion(), 0.001);
@@ -328,6 +323,7 @@ public class SpatialPoolerTest extends junit.framework.TestCase {
 		this.spatialPooler.averageReceptiveFieldSizeOfRegion(), 0.01);
     }
 
+    @Test
     public void test_updateOverlapDutyCycle() {
 	Column[][] columns = this.parentRegion.getColumns();
 

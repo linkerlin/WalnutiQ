@@ -1,20 +1,28 @@
 package model;
 
 import model.MARK_I.VisionCell;
-import model.Retina;
+import org.junit.Before;
+import org.junit.Test;
+
 import java.io.IOException;
+
+import static junit.framework.TestCase.assertFalse;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 /**
  * @author Quinn Liu (quinnliu@vt.edu)
  * @version Feb 9, 2014
  */
-public class RetinaTest extends junit.framework.TestCase {
+public class RetinaTest {
     private Retina retina;
 
+    @Before
     public void setUp() {
 	this.retina = new Retina(5, 15);
     }
 
+    @Test
     public void test_seeBMPImage() throws IOException {
 	/**
 	 * Array2DTest.bmp =

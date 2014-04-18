@@ -1,15 +1,19 @@
 package model.MARK_I;
 
-import model.MARK_I.Cell;
-import model.MARK_I.Synapse;
-import model.MARK_I.VisionCell;
+import org.junit.Before;
+import org.junit.Test;
+
+import static junit.framework.TestCase.assertFalse;
+import static junit.framework.TestCase.fail;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 
 /**
  * @author Quinn Liu (quinnliu@vt.edu)
  * @version June 8, 2013
  */
-public class SynapseTest extends junit.framework.TestCase {
+public class SynapseTest {
     private VisionCell visionCell_1;
     private VisionCell visionCell_NULL;
 
@@ -18,6 +22,7 @@ public class SynapseTest extends junit.framework.TestCase {
     private Synapse<Cell> synapse_3;
     private Synapse<Cell> synapse_4;
 
+    @Before
     public void setUp() {
 	this.visionCell_1 = new VisionCell();
 	this.visionCell_NULL = null;
@@ -26,6 +31,7 @@ public class SynapseTest extends junit.framework.TestCase {
 	this.synapse_2 = new Synapse<Cell>(this.visionCell_1, 0.19, 1, 1);
     }
 
+    @Test
     public void test_Synapse() {
 	assertEquals(Synapse.INITIAL_PERMANENCE,
 		this.synapse_1.getPermanenceValue(), 0.001);
@@ -68,11 +74,13 @@ public class SynapseTest extends junit.framework.TestCase {
 	}
     }
 
+    @Test
     public void test_isConnected() {
 	assertTrue(this.synapse_1.isConnected());
 	assertFalse(this.synapse_2.isConnected());
     }
 
+    @Test
     public void test_increasePermanence() {
 	this.synapse_1.increasePermanence();
 	assertEquals(Synapse.INITIAL_PERMANENCE + Synapse.PERMANENCE_INCREASE,
@@ -83,6 +91,7 @@ public class SynapseTest extends junit.framework.TestCase {
 	assertEquals(1.0, this.synapse_1.getPermanenceValue(), 0.0001);
     }
 
+    @Test
     public void test_decreasePermanence() {
 	this.synapse_1.decreasePermanence();
 	assertEquals(Synapse.INITIAL_PERMANENCE - Synapse.PERMANENCE_DECREASE,

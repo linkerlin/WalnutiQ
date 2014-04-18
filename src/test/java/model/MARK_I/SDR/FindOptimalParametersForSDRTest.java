@@ -1,14 +1,19 @@
 package model.MARK_I.SDR;
 
-import model.MARK_I.SDR.FindOptimalParametersForSDR;
+import org.junit.Before;
+import org.junit.Test;
+
 import java.io.IOException;
+
+import static org.junit.Assert.assertEquals;
 
 /**
  * @author Quinn Liu (quinnliu@vt.edu)
  * @version Apr 10, 2014
  */
-public class FindOptimalParametersForSDRTest extends junit.framework.TestCase {
+public class FindOptimalParametersForSDRTest {
 
+    @Before
     public void setUp() {
 	// not necessary since all methods in class FindOptimalParametersForSDR
 	// are static(meaning you can directly call them without creating an
@@ -20,6 +25,7 @@ public class FindOptimalParametersForSDRTest extends junit.framework.TestCase {
      *
      * @throws IOException
      */
+    @Test
     public void testGetSpatialPoolingScoreWithGivenParametersForMarkNullaModel()
 	    throws IOException {
 	assertEquals(
