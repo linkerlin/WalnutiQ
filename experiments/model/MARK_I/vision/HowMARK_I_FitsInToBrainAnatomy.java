@@ -1,19 +1,32 @@
 package model.MARK_I.vision;
 
-import model.*;
-import model.MARK_I.*;
-import model.MARK_I.connectTypes.*;
-import model.util.*;
-
 import com.google.gson.Gson;
-import java.util.Set;
+import model.LGN;
+import model.MARK_I.ColumnPosition;
+import model.MARK_I.Neocortex;
+import model.MARK_I.Region;
+import model.MARK_I.SpatialPooler;
+import model.MARK_I.connectTypes.RegionToRegionConnectInterface;
+import model.MARK_I.connectTypes.RegionToRegionRectangleConnect;
+import model.MARK_I.connectTypes.SensorCellsToRegionConnectInterface;
+import model.MARK_I.connectTypes.SensorCellsToRegionRectangleConnect;
+import model.NervousSystem;
+import model.Retina;
+import model.util.JsonFileInputOutput;
+import org.junit.Before;
+import org.junit.Test;
+
 import java.io.IOException;
+import java.util.Set;
+
+import static org.junit.Assert.assertEquals;
 
 /**
  * @author Quinn Liu (quinnliu@vt.edu)
  * @version April 12, 2014
  */
-public class HowMARK_I_FitsInToBrainAnatomy extends junit.framework.TestCase {
+
+public class HowMARK_I_FitsInToBrainAnatomy {
     private NervousSystem partialNervousSystem;
 
     /**
@@ -21,6 +34,7 @@ public class HowMARK_I_FitsInToBrainAnatomy extends junit.framework.TestCase {
      */
     private Gson gson;
 
+    @Before
     public void setUp() throws IOException {
 	this.partialNervousSystem = this.constructConnectedNervousSystem();
 
@@ -54,6 +68,7 @@ public class HowMARK_I_FitsInToBrainAnatomy extends junit.framework.TestCase {
 	return nervousSystem;
     }
 
+    @Test
     public void testHowToRunSpatialPoolingOnNervousSystem() throws IOException {
 	Retina retina = partialNervousSystem.getPNS().getSNS().getRetine();
 	Region LGNRegion = partialNervousSystem.getCNS().getBrain()

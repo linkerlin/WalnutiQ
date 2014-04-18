@@ -1,4 +1,4 @@
-package test.java.model.MARK_I;
+package model.MARK_I;
 
 import model.MARK_I.Column;
 import model.MARK_I.connectTypes.RegionToRegionRectangleConnect;

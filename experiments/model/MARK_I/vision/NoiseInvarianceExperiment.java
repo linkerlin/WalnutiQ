@@ -2,9 +2,14 @@ package model.MARK_I.vision;
 
 import model.MARK_I.Region;
 import model.Retina;
+import org.junit.Before;
+import org.junit.Test;
 
 import java.io.IOException;
 import java.util.Set;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 /**
  * -------------------------------Purpose---------------------------------------
@@ -24,11 +29,12 @@ import java.util.Set;
  * @author Quinn Liu (quinnliu@vt.edu)
  * @version April 12, 2014
  */
-public class NoiseInvarianceExperiment extends junit.framework.TestCase {
+public class NoiseInvarianceExperiment {
     private Retina retina;
     private model.MARK_I.Region region;
     private model.MARK_I.SpatialPooler spatialPooler;
 
+    @Before
     public void setUp() {
 	// images this retina will see in folder images/model/ are 66x66 pixels
 	this.retina = new Retina(66, 66);
@@ -42,6 +48,7 @@ public class NoiseInvarianceExperiment extends junit.framework.TestCase {
 	this.spatialPooler.setLearningState(true);
     }
 
+    @Test
     public void test_runNoiseInvarianceExperiment() throws IOException {
 
 	// --------------------------"2.bmp"-------------------------------

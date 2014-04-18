@@ -1,4 +1,4 @@
-package test.java.model.MARK_I;
+package model.MARK_I;
 
 import model.MARK_I.Cell;
 import model.MARK_I.Synapse;

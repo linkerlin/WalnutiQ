@@ -1,4 +1,4 @@
-package test.java.model;
+package model;
 
 import model.MARK_I.VisionCell;
 import model.Retina;

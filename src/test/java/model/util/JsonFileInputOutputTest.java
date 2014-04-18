@@ -1,4 +1,4 @@
-package test.java.model.util;
+package model.util;
 
 import model.util.JsonFileInputOutput;
 import model.MARK_I.Column;

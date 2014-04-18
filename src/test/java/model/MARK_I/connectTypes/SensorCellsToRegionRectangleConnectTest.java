@@ -1,4 +1,4 @@
-package test.java.model.MARK_I.connectTypes;
+package model.MARK_I.connectTypes;
 
 import model.MARK_I.Column;
 import model.MARK_I.VisionCell;
